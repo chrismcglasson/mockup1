@@ -97,6 +97,19 @@ a { color: inherit; }
 }
 .btn-ghost:hover { background: var(--ink); color: var(--cream); }
 
+.btn-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.btn-header-icon {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+.btn-header-text-short { display: none; }
+
 .tape-label {
   display: inline-block;
   position: relative;
@@ -467,11 +480,24 @@ a { color: inherit; }
    Reviews
    ========================================================= */
 .reviews { background: var(--charcoal); color: var(--cream); }
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--cream);
+  margin: -4px 0 10px;
+}
+.reviews-summary-stars {
+  color: var(--terracotta);
+  letter-spacing: 2px;
+}
 .reviews-note {
   color: #a89f92;
   font-size: 0.88rem;
   font-style: italic;
-  margin: -8px 0 32px;
+  margin: 0 0 32px;
 }
 .reviews-grid {
   display: grid;
@@ -654,7 +680,12 @@ a { color: inherit; }
     border-bottom: 1px solid rgba(34,31,29,0.08);
     gap: 14px;
   }
-  .btn-header { display: none; }
+  .btn-header {
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+  .btn-header-text-full { display: none; }
+  .btn-header-text-short { display: inline; }
   .reviews-grid { grid-template-columns: 1fr; }
   .hero-grid { grid-template-columns: 1fr; min-height: 0; }
   .hero-copy { padding: 108px 24px 56px; }
