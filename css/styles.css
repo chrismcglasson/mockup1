@@ -695,7 +695,7 @@ a { color: inherit; }
   .reviews-grid { grid-template-columns: 1fr; }
   .hero-grid { grid-template-columns: 1fr; min-height: 0; }
   .hero-copy { padding: 108px 24px 56px; }
-  .hero-visual { height: 160px; }
+  .hero-visual { height: 220px; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-nav { justify-self: start; }
 }

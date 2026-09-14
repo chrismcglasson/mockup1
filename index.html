@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
 
@@ -56,9 +56,58 @@
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <svg class="hero-visual-stroke" viewBox="0 0 400 500" preserveAspectRatio="none">
-          <path d="M60,0 C160,90 40,180 180,260 C300,330 120,420 220,500 L400,500 L400,0 Z" fill="var(--terracotta)" opacity="0.35"/>
-          <path d="M180,0 C260,110 140,220 260,320 C350,390 260,460 340,500 L400,500 L400,0 Z" fill="var(--acme-red)" opacity="0.25"/>
+        <svg class="hero-visual-stroke" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <!-- figure + fresh paint shifted down so it survives the tight crop
+               on short/wide mobile panels (preserveAspectRatio=slice centers
+               on the viewBox middle, so key content needs to sit near y=250) -->
+          <g transform="translate(0,45)">
+          <!-- freshly rolled patch of color on the wall -->
+          <path d="M235,0 C300,55 260,95 330,120 C380,138 400,110 400,110 L400,0 Z" fill="var(--terracotta)" opacity="0.9"/>
+          <path d="M270,0 C320,40 300,70 360,90 C390,100 400,85 400,85 L400,0 Z" fill="var(--acme-red)" opacity="0.85"/>
+          <!-- paint drips running from the fresh patch -->
+          <path d="M262,118 q-3,26 0,40 q3,10 6,0 q3,-14 0,-40 Z" fill="var(--terracotta)"/>
+          <path d="M300,128 q-3,20 0,32 q3,8 6,0 q3,-12 0,-32 Z" fill="var(--terracotta)"/>
+          <path d="M338,110 q-3,34 0,52 q3,12 6,0 q3,-18 0,-52 Z" fill="var(--acme-red)"/>
+          </g>
+
+          <!-- ladder -->
+          <g transform="rotate(-5 200 478)">
+            <rect x="148" y="70" width="13" height="404" rx="4" fill="var(--cream)" opacity="0.95"/>
+            <rect x="233" y="70" width="13" height="404" rx="4" fill="var(--cream)" opacity="0.95"/>
+            <rect x="152" y="110" width="90" height="11" rx="3" fill="var(--cream)" opacity="0.95"/>
+            <rect x="152" y="170" width="90" height="11" rx="3" fill="var(--cream)" opacity="0.95"/>
+            <rect x="152" y="230" width="90" height="11" rx="3" fill="var(--cream)" opacity="0.95"/>
+            <rect x="152" y="290" width="90" height="11" rx="3" fill="var(--cream)" opacity="0.95"/>
+            <rect x="152" y="350" width="90" height="11" rx="3" fill="var(--cream)" opacity="0.95"/>
+            <rect x="152" y="410" width="90" height="11" rx="3" fill="var(--cream)" opacity="0.95"/>
+          </g>
+
+          <!-- painter: bold pictogram figure, thick round-capped strokes -->
+          <g transform="translate(0,45) rotate(-5 200 478)" stroke="var(--cream)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <!-- legs, standing on a rung -->
+            <path d="M199,252 L180,300" stroke-width="17"/>
+            <path d="M199,252 L219,302" stroke-width="17"/>
+            <!-- torso -->
+            <path d="M199,184 L199,254" stroke-width="24"/>
+            <!-- lowered arm -->
+            <path d="M197,196 L165,222" stroke-width="15"/>
+            <!-- raised arm reaching up to the roller -->
+            <path d="M203,192 L272,112" stroke-width="15"/>
+            <!-- head -->
+            <circle cx="199" cy="160" r="21" fill="var(--cream)" stroke="none"/>
+            <!-- roller tool head, crossing the pole at the wall -->
+            <rect x="255" y="97" width="46" height="17" rx="7" fill="var(--acme-red)" stroke="none" transform="rotate(42 278 105)"/>
+          </g>
+
+          <!-- paint can at ladder base -->
+          <g transform="rotate(-5 200 478)">
+            <rect x="88" y="422" width="52" height="46" rx="6" fill="var(--cream)" opacity="0.95"/>
+            <rect x="88" y="422" width="52" height="14" rx="6" fill="var(--acme-red)"/>
+            <path d="M96,422 q18,-22 36,0" stroke="var(--cream)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.95"/>
+          </g>
+
+          <!-- drop cloth -->
+          <path d="M0,468 Q60,452 130,468 T260,468 T400,464 L400,500 L0,500 Z" fill="var(--cream)" opacity="0.1"/>
         </svg>
       </div>
     </div>
