@@ -100,15 +100,17 @@ a { color: inherit; }
 .btn-header {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
+  padding: 11px 20px;
+  font-size: 0.88rem;
+  white-space: nowrap;
 }
 .btn-header-icon {
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
   fill: currentColor;
   flex-shrink: 0;
 }
-.btn-header-text-short { display: none; }
 
 .tape-label {
   display: inline-block;
@@ -680,12 +682,16 @@ a { color: inherit; }
     border-bottom: 1px solid rgba(34,31,29,0.08);
     gap: 14px;
   }
+  .header-inner { gap: 12px; }
+  .brand-mark { width: 40px; height: 40px; }
+  .brand-sub { display: none; }
   .btn-header {
-    padding: 10px 14px;
-    font-size: 0.82rem;
+    padding: 9px 14px;
+    font-size: 0.78rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
   }
-  .btn-header-text-full { display: none; }
-  .btn-header-text-short { display: inline; }
   .reviews-grid { grid-template-columns: 1fr; }
   .hero-grid { grid-template-columns: 1fr; min-height: 0; }
   .hero-copy { padding: 108px 24px 56px; }
